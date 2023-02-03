@@ -4,6 +4,7 @@ Tistory auto-writing program using NotionAI and python.
 ## Required packages
 - `notionai-py`
 - `threading`
+- `python-dotenv`
 
 ## The .env file
 - `NOTION_TOKEN` : Input your Notion token to use NotionAI
