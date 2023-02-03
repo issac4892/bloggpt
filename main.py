@@ -7,6 +7,7 @@ from dotenv import load_dotenv
 load_dotenv()
 TOKEN = os.environ.get("NOTION_TOKEN")
 TISTORY_ACCESS_TOKEN = os.environ.get("TISTORY_ACCESS_TOKEN")
+TISTORY_BLOG_NAME = os.environ.get("TISTORY_BLOG_NAME")
 
 
 def process():
@@ -24,7 +25,7 @@ def process():
     print(f'태그 생성 완료: {tags}')
 
     requests.post(
-        f"https://www.tistory.com/apis/post/write?access_token={TISTORY_ACCESS_TOKEN}&blogName=daily-dev-knowledge&title={topic}&visibility=3&content={article}&tag={tags}")
+        f"https://www.tistory.com/apis/post/write?access_token={TISTORY_ACCESS_TOKEN}&blogName={TISTORY_BLOG_NAME}&title={topic}&visibility=3&content={article}&tag={tags}")
     print('아티클 업로드 완료!')
 
     threading.Timer(3600, process).start()
