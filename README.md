@@ -6,7 +6,7 @@ Tistory auto-writing program using NotionAI and python.
 - `threading`
 - `python-dotenv`
 
-## The .env file
+## Required .env value
 - `NOTION_TOKEN` : Input your Notion token to use NotionAI
 - `TISTORY_BLOG_NAME` : Input your Tistory blog name to upload article
-- `TISTORY_ACCESS_TOKE` : Input your Tistory access token to upload article via calling API
+- `TISTORY_ACCESS_TOKEN` : Input your Tistory access token to upload article via calling API
