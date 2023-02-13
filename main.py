@@ -32,7 +32,6 @@ def process():
         "slug": slug,
         "title": topic,
         "content": article,
-        "date": str(datetime.now().isoformat),
         "categories": category_ids
     }
 
@@ -43,7 +42,7 @@ def process():
                         )
 
     if res.ok :
-        print(f"{res.status.code}")
+        print(f"{res}")
     else:
         print(f"error {res}")
 
